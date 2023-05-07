@@ -36,3 +36,5 @@ tomli==2.0.1
 urllib3==1.26.9
 Werkzeug==2.1.1
 zipp==3.7.0
+pylint-flask-sqlalchemy
+pylint-flask
