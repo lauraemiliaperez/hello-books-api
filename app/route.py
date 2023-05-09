@@ -102,8 +102,10 @@ def delete_book(book_id):
 #no jsonify:
     return make_response(jsonify(f"Book #{book_id} successfully deleted"))
 
-#Author routes:
 
+
+
+#Author routes:
 
 @authors_bp.route("", methods=["POST"])
 def create_author():
@@ -152,7 +154,7 @@ def create_book_for_author(author_id):
 @authors_bp.route("/<author_id>/books", methods=["GET"])
 def get_all_books_from_author(author_id):
     author = validate_model(Author, author_id)
-    
+
     books_response = []
     for book in author.books:
         books_response.append(
